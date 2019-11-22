@@ -447,7 +447,7 @@ export PATH="\${KREW_ROOT:-\$HOME/.krew}/bin:\$PATH"\
 
 [root@kubemaster01 ~]# source .bashrc\
 [root@kubemaster01 ~]# kubectl krew install virt\
-[root@kubemaster01 ~]# kubectl apply -f https://raw.githubusercontent.com/kubevirt/kubevirt.github.io/master/labs/manifests/vm.yaml\
+[root@kubemaster01 ~]# kubectl apply -f https://raw.githubusercontent.com/kubevirt/kubevirt.github.io/master/labs/manifests/vm.yaml \
 [root@kubemaster01 ~]# kubectl get vmis\
 NAME     AGE   PHASE     IP            NODENAME\
 testvm   23s   Running   10.244.0.18   kubemaster01
