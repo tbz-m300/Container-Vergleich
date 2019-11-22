@@ -215,7 +215,7 @@ Kubernetes läuft immer in einem Cluster Verbund, in dem es mindestens einen Mas
 ISO URL: http://pkg.adfinis-sygroup.ch/centos/7.7.1908/isos/x86_64/CentOS-7-x86_64-Minimal-1908.iso
 
 ### Installation Kubernetes Cluster mit Docker
-Referenz: https://kubernetes.io/docs/setup/production-environment/container-runtimes/\
+Referenz: https://kubernetes.io/docs/setup/production-environment/container-runtimes/ \
 Referenz: https://www.howtoforge.com/tutorial/centos-kubernetes-docker-cluster/
 
 #### Kubernetes Master Server
@@ -236,7 +236,7 @@ Referenz: https://www.howtoforge.com/tutorial/centos-kubernetes-docker-cluster/
 \---
 
 [root@kubemaster01 ~]# yum -y install yum-utils device-mapper-persistent-data lvm2\
-[root@kubemaster01 ~]# yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo\
+[root@kubemaster01 ~]# yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo \
 [root@kubemaster01 ~]# yum update\
 [root@kubemaster01 ~]# yum -y install docker-ce-18.09.9\
 [root@kubemaster01 ~]# mkdir /etc/docker\
@@ -277,7 +277,7 @@ Referenz: https://www.howtoforge.com/tutorial/centos-kubernetes-docker-cluster/
 [root@kubemaster01 ~]# cp -i /etc/kubernetes/admin.conf $HOME/.kube/config\
 [root@kubemaster01 ~]# chown $(id -u):$(id -g) $HOME/.kube/config\
 [root@kubemaster01 ~]# cat $HOME/.kube/config\
-[root@kubemaster01 ~]# kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml\
+[root@kubemaster01 ~]# kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
 [root@kubemaster01 ~]# kubectl get nodes\
 NAME           STATUS   ROLES    AGE     VERSION\
